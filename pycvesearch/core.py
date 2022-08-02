@@ -61,14 +61,12 @@ class CVESearch(object):
     def cpe22(self, param):
         """ cpe22() returns a string containing the cpe2.2 ID of a cpe2.3 input
         """
-        data = self._http_get('cpe2.2', query=param)
-        return data
+        return self._http_get('cpe2.2', query=param)
 
     def cpe23(self, param):
         """ cpe23() returns a string containing the cpe2.3 ID of a cpe2.2 input
         """
-        data = self._http_get('cpe2.3', query=param)
-        return data
+        return self._http_get('cpe2.3', query=param)
 
     def cvefor(self, param) -> Dict:
         """ cvefor() returns a dict containing the CVE's for a given CPE ID
